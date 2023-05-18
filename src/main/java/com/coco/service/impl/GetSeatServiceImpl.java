@@ -77,7 +77,9 @@ public class GetSeatServiceImpl implements GetSeatService {
     public void startGetSeats() {
         List<AutoGetseatUsers> list = iAutoGetseatUsersService.list();
         for (AutoGetseatUsers user : list) {
-            threadPoolTaskExecutor.execute(() -> getOneSeat(user));
+            threadPoolTaskExecutor.execute(() -> {
+                getOneSeat(user);
+            });
         }
     }
 
@@ -92,7 +94,7 @@ public class GetSeatServiceImpl implements GetSeatService {
         //linux版本：
 //        ChromeDriverUtil chromeDriverUtil = new ChromeDriverUtil("/chromedriver/chromedriver", false, false);
         ChromeDriver driver = chromeDriverUtil.getDriver();
-        WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(5L));
+        WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(20L));
         //endregion
 
         //region 获取参数信息

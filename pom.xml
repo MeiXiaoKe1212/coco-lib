@@ -15,7 +15,7 @@
     <description>coco-lib</description>
     <properties>
         <java.version>8</java.version>
-        <selenium.version>4.2.0</selenium.version>
+        <selenium.version>4.9.0</selenium.version>
     </properties>
     <dependencies>
         <dependency>
