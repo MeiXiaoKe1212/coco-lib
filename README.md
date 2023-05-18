@@ -1,7 +1,8 @@
 # coco-lib
-> 如果你不想自己部署的话，可以到[NTU占座服务](https://lib.codeke.fun)提交你的预约信息
-南通大学图书馆自动占位
+## 南通大学图书馆自动占位
 适用于使用超星saas图书馆系统的高校
+
+> 如果你不想自己部署的话，可以到[NTU占座服务](https://lib.codeke.fun)提交你的预约信息
 
 1. clone下来请在你的主机新建`coco-lib`数据库(MySQL8)
 2. 运行sql文件夹内的脚本
