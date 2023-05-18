@@ -73,7 +73,7 @@ public class GetSeatServiceImpl implements GetSeatService {
      * 定时方法，开始为所有参数进行抢座
      */
     @Override
-    @Scheduled(cron = "0 11 13 * * ?")
+    @Scheduled(cron = "0 0 7 * * ?")
     public void startGetSeats() {
         List<AutoGetseatUsers> list = iAutoGetseatUsersService.list();
         for (AutoGetseatUsers user : list) {
