@@ -87,12 +87,10 @@ public class GetSeatServiceImpl implements GetSeatService {
     @Override
     public void getOneSeat(AutoGetseatUsers user) {
         //region 获取驱动
-        //windows版本：
-        ChromeDriverUtil chromeDriverUtil = new ChromeDriverUtil("F:\\auto_getSeat\\chromedriver.exe", false, false);
         //linux版本：
-//        ChromeDriverUtil chromeDriverUtil = new ChromeDriverUtil("/chromedriver/chromedriver", false, false);
+        ChromeDriverUtil chromeDriverUtil = new ChromeDriverUtil("/servers/driver/chromedriver", false, false);
         ChromeDriver driver = chromeDriverUtil.getDriver();
-        WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(5L));
+        WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10L));
         //endregion
 
         //region 获取参数信息
