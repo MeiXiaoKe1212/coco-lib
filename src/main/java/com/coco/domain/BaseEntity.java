@@ -1,4 +1,4 @@
-package com.ruoyi.common.core.domain;
+package com.coco.domain;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -12,8 +12,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 
 /**
  * Entity基类
- *
- * @author ruoyi
  */
 public class BaseEntity implements Serializable {
     private static final long serialVersionUID = 1L;
