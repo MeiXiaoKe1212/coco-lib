@@ -33,9 +33,4 @@ CREATE TABLE `auto_getseat_users`  (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
--- ----------------------------
--- Records of auto_getseat_users
--- ----------------------------
-INSERT INTO `auto_getseat_users` VALUES (1, '13276126840', 'Mxk123..00', '6710', '2100~2130', '2130~2200', '168', 'mxk');
-
 SET FOREIGN_KEY_CHECKS = 1;
