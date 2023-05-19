@@ -1,15 +1,49 @@
-# coco-lib
-## 南通大学图书馆自动占位
-适用于使用超星saas图书馆系统的高校
+<p align="center">
+  <h2 align="center">Coco-Lib</h2>
+  <p align="center">
+    适用于南通大学的一款自动占位工具
+    <br/>
+    <br/>
+    <a href="https://lib.codeke.fun"><strong>» 点我使用 »</strong></a>
+    <br/>
+  </p>
+</p>
 
-> 如果你不想自己部署的话，可以到[NTU占座服务](https://lib.codeke.fun)提交你的预约信息
+> 测试阶段，不保证稳定性，欢迎感兴趣的大佬前来完善
 
-1. clone下来请在你的主机新建`coco-lib`数据库(MySQL8)
-2. 运行sql文件夹内的脚本
-3. 在`GetSeatServiceImpl`修改`chromedriver`所在路径
-4. 前端`npm install`后执行`npm run serve`启动，填写所需参数
+## 🐎 项目介绍
 
-> 匆忙写的 欢迎完善
+该项目包括一个后端和一个前端，后端使用 `Java` 语言编写，前端使用 `Vue.js` 框架。其中后端需要将项目克隆到本地后，在本地新建一个名为 `coco-lib` 的 `MySQL` 数据库，然后运行 `sql` 文件夹内的脚本进行数据库初始化。
 
-### UI界面：
-https://github.com/MeiXiaoKe1212/coco-lib-ui
+前端部分需要安装 `Node.js` 环境，然后使用 `npm install` 命令安装所需依赖，在修改后通过 `npm run serve `命令启动。
+
+该项目主要适用于需要经常预约南通大学图书馆座位的用户，可以自动化完成预约操作，减轻用户操作负担，提升预约成功的概率。
+
+## 🔧安装使用
+
+因为该项目需要后端和前端配合运行，因此需要分别安装和启动。下面是具体的步骤。
+
+### 后端
+
+1. 将项目克隆到本地
+2. 在本地安装 Java 和 MySQL 等必要环境
+3. 在本地新建一个名为 coco-lib 的 MySQL 数据库
+4. 执行 sql 文件夹内的脚本进行数据库初始化
+5. 配置 application.yml 文件
+6. 启动后端服务
+
+### 前端
+
+1. 克隆项目到本地
+2. 安装 Node.js 环境
+3. 在命令行键入 `npm install` 安装所需依赖
+4. 在命令行键入 `npm run serve` 启动前端服务
+5. 打开浏览器，在地址栏输入 http://localhost:8080 即可访问
+
+如果出现问题，可以去 UI 界面仓库查看更多帮助。
+
+## 🦊UI 界面
+
+你也可以访问我的 GitHub 仓库了解该项目的 UI 界面 https://github.com/MeiXiaoKe1212/coco-lib-ui。
+
+该仓库中包含了该项目的 UI 界面，可以便捷地完成预约操作。
