@@ -8,7 +8,7 @@ import com.coco.global.Global;
 import com.coco.service.GetSeatService;
 import com.coco.service.IAutoGetseatUsersService;
 import com.coco.service.IVerifyCodeService;
-import com.coco.utils.ChromeDriverUtil;
+import com.coco.webDriver.WebDriverManager;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
@@ -32,6 +32,9 @@ import java.util.Set;
 @Service("autoGetSeat")
 @Slf4j
 public class GetSeatServiceImpl implements GetSeatService {
+
+    @Resource
+    private WebDriverManager webDriverManager;
 
     @Resource
     private ThreadPoolTaskExecutor threadPoolTaskExecutor;
@@ -90,11 +93,13 @@ public class GetSeatServiceImpl implements GetSeatService {
     public void getOneSeat(AutoGetseatUsers user) {
         //region 获取驱动
         //windows版本：
-        ChromeDriverUtil chromeDriverUtil = new ChromeDriverUtil("F:\\auto_getSeat\\chromedriver.exe", false, false);
-        //linux版本：
-//        ChromeDriverUtil chromeDriverUtil = new ChromeDriverUtil("/chromedriver/chromedriver", false, false);
-        ChromeDriver driver = chromeDriverUtil.getDriver();
-        WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(20L));
+        ChromeDriver driver = new ChromeDriver();
+        try {
+            driver = webDriverManager.getWebDriver();
+        } catch (Exception e) {
+            log.error("获取webdriver实例失败\n{}", e.getMessage());
+        }
+        WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10L));
         //endregion
 
         //region 获取参数信息
@@ -144,9 +149,9 @@ public class GetSeatServiceImpl implements GetSeatService {
 
         long end = System.currentTimeMillis();
         double elapsedTime = (end - start) / 1000.0;
-        log.debug("方法运行时间：" + elapsedTime + "秒");
+        log.debug(driver.hashCode() + "号实例运行时间：" + elapsedTime + "秒");
         driver.close();
+        webDriverManager.returnWebDriver(driver);
     }
-
 
 }

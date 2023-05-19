@@ -57,6 +57,7 @@ public class ChromeDriverUtil {
         options.addArguments("--disk-cache-dir=" + file2.getAbsolutePath()); //指定Cache路径
         options.addArguments("--disable-plugins"); //禁用插件,加快速度
         options.addArguments("--disable-extensions"); //禁用扩展
+        options.addArguments("--incognito"); //无痕模式
         options.addArguments("--disable-popup-blocking"); //关闭弹窗拦截
         options.addArguments("--ignore-certificate-errors"); //  禁现窗口最大化
         options.addArguments("--allow-running-insecure-content");  //关闭https提示 32位
