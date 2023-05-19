@@ -85,8 +85,7 @@ public class GetSeatServiceImpl implements GetSeatService {
     @Override
     @Scheduled(cron = "0 0 7 * * ?")
     public void startGetSeats() {
-        List<AutoGetseatUsers> list = iAutoGetseatUsersService.list();
-        for (AutoGetseatUsers user : list) {
+        for (AutoGetseatUsers user : Global.userList) {
             threadPoolTaskExecutor.execute(() -> {
                 getOneSeat(user);
             });
