@@ -1,5 +1,5 @@
 <p align="center">
-  <h2 align="center">Coco-Lib</h2>
+  <h1 align="center">Coco-Lib</h1>
   <p align="center">
     适用于南通大学的一款自动占位工具
     <br/>
