@@ -1,7 +1,7 @@
 <p align="center">
   <h1 align="center">Coco-Lib</h1>
   <p align="center">
-    适用于南通大学的一款自动占位工具
+    适用于南通大学图书馆的一款自动占座位工具
     <br/>
     <br/>
     <a href="https://lib.codeke.fun"><strong>» 点我使用 »</strong></a>
