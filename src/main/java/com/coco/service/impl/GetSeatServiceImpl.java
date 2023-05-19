@@ -72,6 +72,13 @@ public class GetSeatServiceImpl implements GetSeatService {
         //endregion
     }
 
+    @Scheduled(cron = "0 0 7 * * ?")
+    public void updateGlobalMap() {
+        List<AutoGetseatUsers> userListDB = iAutoGetseatUsersService.list();
+        Global.userList.clear();
+        Global.userList.addAll(userListDB);
+    }
+
     /**
      * 定时方法，开始为所有参数进行抢座
      */

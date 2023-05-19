@@ -4,7 +4,6 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.coco.domain.AutoGetseatUsers;
 import com.coco.mapper.AutoGetseatUsersMapper;
 import com.coco.service.IAutoGetseatUsersService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

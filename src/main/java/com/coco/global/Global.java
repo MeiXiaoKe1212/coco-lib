@@ -1,7 +1,9 @@
 package com.coco.global;
 
+import com.coco.domain.AutoGetseatUsers;
 import com.coco.domain.Shuku;
 import com.coco.domain.TimeDurationPath;
+import com.coco.service.IAutoGetseatUsersService;
 import com.coco.service.IShukuService;
 import com.coco.service.ITimeDurationPathService;
 import lombok.extern.slf4j.Slf4j;
@@ -9,6 +11,7 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -24,6 +27,8 @@ public class Global {
 
     public static ConcurrentHashMap<String, ConcurrentHashMap<String, String>> map = new ConcurrentHashMap<>();
 
+    public static List<AutoGetseatUsers> userList = new ArrayList<>();
+
     public static final String SHUKU_DATA = "shukuData";
     public static final String TIME_DATA = "timeData";
 
@@ -32,6 +37,9 @@ public class Global {
 
     @Resource
     private ITimeDurationPathService timeDurationPathService;
+
+    @Resource
+    private IAutoGetseatUsersService autoGetseatUsersService;
 
     /**
      * 服务启动自动加载抢座用户信息
@@ -57,6 +65,11 @@ public class Global {
                     }
             );
             map.put(TIME_DATA, timeData);
+            // 获取用户信息
+            List<AutoGetseatUsers> userListDB = autoGetseatUsersService.list();
+            if (!userListDB.isEmpty()) {
+                userList.addAll(userListDB);
+            }
         } catch (Exception e) {
             log.error("配置加载失败，请检查" + e.getMessage());
         }
