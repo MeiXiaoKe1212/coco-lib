@@ -1,7 +1,7 @@
 <p align="center">
   <h1 align="center">Coco-Lib</h1>
   <p align="center">
-    适用于南通大学图书馆的一款自动占座位工具
+    自动占座位辅助
     <br/>
     <br/>
     <a href="https://lib.codeke.fun"><strong>» 点我使用 »</strong></a>
@@ -16,8 +16,6 @@
 该项目包括一个后端和一个前端，后端使用 `Java` 语言编写，前端使用 `Vue.js` 框架。其中后端需要将项目克隆到本地后，在本地新建一个名为 `coco-lib` 的 `MySQL` 数据库，然后运行 `sql` 文件夹内的脚本进行数据库初始化。
 
 前端部分需要安装 `Node.js` 环境，然后使用 `npm install` 命令安装所需依赖，在修改后通过 `npm run serve `命令启动。
-
-该项目主要适用于需要经常预约南通大学图书馆座位的用户，可以自动化完成预约操作，减轻用户操作负担，提升预约成功的概率。
 
 ## 🔧安装使用
 
