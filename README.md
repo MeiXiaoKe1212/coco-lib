@@ -1,7 +1,7 @@
 <p align="center">
   <h1 align="center">Coco-Lib</h1>
   <p align="center">
-    自动占座位辅助
+    基于Selenium的图书馆自动占座位辅助
     <br/>
     <br/>
     <a href="https://lib.codeke.fun"><strong>» 点我使用 »</strong></a>
