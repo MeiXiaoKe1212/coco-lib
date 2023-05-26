@@ -4,7 +4,7 @@
     基于Selenium的图书馆自动占座位辅助
     <br/>
     <br/>
-    <a href="https://lib.codeke.fun"><strong>» 点我使用 »</strong></a>
+    <a href="https://www.codeke.fun"><strong>» 点我使用 »</strong></a>
     <br/>
   </p>
 </p>
